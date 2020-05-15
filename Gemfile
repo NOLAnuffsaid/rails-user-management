@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) do |repo| "https://github.com/#{repo}.git" end
 
 ruby '2.6.5'
 
@@ -34,6 +34,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'guard-cucumber'
   gem 'guard-rspec'
   gem 'guard-rubocop'
   gem 'guard-rubybeautify'
@@ -45,6 +46,7 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'cucumber-rails', require: false
   gem 'database_cleaner-active_record'
   gem 'rspec-rails'
   gem 'shoulda-matchers', '~> 4.3'

@@ -18,6 +18,13 @@ Lint/StructNewOverride:
 Style/BlockComments:
   Enabled: false
 
+Style/BlockDelimiters:
+  Enabled: true
+  EnforcedStyle: 'semantic'
+
+Style/Documentation:
+  Enabled: false
+
 Style/ExponentialNotation:
   Enabled: true
 
