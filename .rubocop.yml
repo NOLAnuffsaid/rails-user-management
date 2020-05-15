@@ -4,6 +4,11 @@ AllCops:
 Layout/SpaceAroundMethodCallOperator:
   Enabled: true
 
+Layout/LineLength:
+  Enabled: true
+  AutoCorrect: true
+  IgnoredPatterns: ['\A\s*#']
+
 Lint/RaiseException:
   Enabled: true
 
@@ -15,6 +20,9 @@ Style/BlockComments:
 
 Style/ExponentialNotation:
   Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
 
 Style/HashEachMethods:
   Enabled: true
