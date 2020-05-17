@@ -1,0 +1,21 @@
+language: ruby
+
+rvm:
+  - 2.6
+
+
+before_install:
+  - gem install bundler
+
+bundler_args: --without production --without development
+
+services:
+  - postgresql
+
+before_script:
+  - psql -U postgres -c "CREATE USER $RUBY_DB_USER WITH CREATEDB LOGIN ENCRYPTED PASSWORD '$DB_PW'"
+
+script:
+  - RAILS_ENV=test bundle_exec rubocop -F
+  - RAILS_ENV=test bundle exec rspec
+  - RAILS_ENV=test bundle exec cucumber
