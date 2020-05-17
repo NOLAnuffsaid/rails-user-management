@@ -13,7 +13,8 @@ services:
   - postgresql
 
 before_script:
-  - psql -U postgres -c "CREATE USER $RUBY_DB_USER WITH CREATEDB LOGIN ENCRYPTED PASSWORD '$DB_PW'"
+  - psql -U postgres -c "CREATE DATABASE user_management_test;"
+  - psql -U postgres -c "CREATE USER $RUBY_DB_USER WITH CREATEDB LOGIN ENCRYPTED PASSWORD '$DB_PW';"
 
 script:
   - rubocop -F
