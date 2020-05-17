@@ -14,10 +14,7 @@ services:
 
 before_script:
   - psql -U postgres -c "CREATE USER $RUBY_DB_USER WITH CREATEDB LOGIN ENCRYPTED PASSWORD '$DB_PW'"
-  - RAILS_ENV=test bundle exec rails db:setup
-  - RAILS_ENV=test bundle exec rails db:migrate
 
 script:
   - rubocop -F
-  - bundle exec rspec
-  - bundle exec cucumber
+  - RAILS_ENV=test bundle exec rails db:setup && RAILS_ENV=test bundle exec rails db:migrate && bundle exec rspec && bundle exec cucumber
