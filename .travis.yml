@@ -6,6 +6,7 @@ rvm:
 
 before_install:
   - gem install bundler
+  - gem install rubocop
 
 bundler_args: --without production --without development
 
@@ -16,6 +17,6 @@ before_script:
   - psql -U postgres -c "CREATE USER $RUBY_DB_USER WITH CREATEDB LOGIN ENCRYPTED PASSWORD '$DB_PW'"
 
 script:
-  - RAILS_ENV=test bundle exec rubocop -F
-  - RAILS_ENV=test bundle exec rspec
-  - RAILS_ENV=test bundle exec cucumber
+  - bundle exec rubocop -F
+  - bundle exec rspec
+  - bundle exec cucumber
