@@ -16,6 +16,6 @@ before_script:
   - psql -U postgres -c "CREATE USER $RUBY_DB_USER WITH CREATEDB LOGIN ENCRYPTED PASSWORD '$DB_PW'"
 
 script:
-  - RAILS_ENV=test bundle_exec rubocop -F
+  - RAILS_ENV=test bundle exec rubocop -F
   - RAILS_ENV=test bundle exec rspec
   - RAILS_ENV=test bundle exec cucumber
