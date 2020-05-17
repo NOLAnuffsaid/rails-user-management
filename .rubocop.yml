@@ -43,3 +43,9 @@ Style/HashTransformValues:
 Style/RegexpLiteral:
   Enabled: true
   EnforcedStyle: percent_r
+
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+
+Style/SlicingWithRange:
+  Enabled: true
