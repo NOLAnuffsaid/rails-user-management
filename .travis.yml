@@ -4,7 +4,7 @@ rvm:
   - 2.6.5
 
 env:
-  - RUBY_DB_USER=ci-test DB_PW=widner
+  - RUBY_DB_USER=cicdtest DB_PW=widner
 
 before_install:
   - sudo apt-get update -y && sudo apt-get install -y libsodium-dev
