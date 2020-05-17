@@ -12,6 +12,8 @@ end
 require 'rspec/rails'
 require 'capybara/rspec'
 require 'database_cleaner/active_record'
+require 'rantly/rspec_extensions'
+require 'faker'
 
 Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each do |f|
   require f

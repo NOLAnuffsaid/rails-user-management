@@ -1,6 +1,3 @@
-require 'faker'
-require 'rantly/rspec_extensions'
-
 RSpec.describe 'A property' do
   it 'apps should have properties' do
     prop = property_of {

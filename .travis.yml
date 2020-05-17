@@ -5,10 +5,9 @@ rvm:
 
 
 before_install:
+  - sudo apt-get update -y && sudo apt-get install -y libsodium-dev
   - gem install bundler
   - gem install rubocop
-
-bundler_args: --without production --without development
 
 services:
   - postgresql
@@ -17,6 +16,6 @@ before_script:
   - psql -U postgres -c "CREATE USER $RUBY_DB_USER WITH CREATEDB LOGIN ENCRYPTED PASSWORD '$DB_PW'"
 
 script:
-  - bundle exec rubocop -F
+  - rubocop -F
   - bundle exec rspec
   - bundle exec cucumber
