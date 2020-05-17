@@ -48,6 +48,7 @@ group :test do
   gem 'capybara'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner-active_record'
+  gem 'rantly'
   gem 'rspec-rails'
   gem 'shoulda-matchers', '~> 4.3'
 end
