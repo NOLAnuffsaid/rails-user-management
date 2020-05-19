@@ -1,7 +1,7 @@
 require 'v1_acceptance_helper'
 
+# rubocop:disable Metrics/BlockLength
 resource 'Users' do
-
   explanation <<-EX
   Users are managed through one route that
   accepts different types of requests
@@ -19,7 +19,6 @@ resource 'Users' do
     end
 
     context 'queries' do
-
       example 'for single user' do
       end
 
@@ -31,7 +30,6 @@ resource 'Users' do
     end
 
     context 'mutations' do
-
       example 'for user creation' do
       end
 
@@ -46,3 +44,4 @@ resource 'Users' do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
