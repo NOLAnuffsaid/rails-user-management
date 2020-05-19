@@ -15,8 +15,8 @@ RSpec.describe 'A property' do
       end
     }
 
-    prop.check do |b|
-      regex = %r{[a-zA-Z0-9]\@[a-zA-Z0-9].[a-zA-Z0-9]}
+    prop.check(1000) do |b|
+      regex = %r{[a-zA-Z0-9\_\-.]+\@[a-zA-Z0-9]+.[a-zA-Z0-9]+}
       expect(b[:username]).to be_an_instance_of(String)
       expect(b[:email]).to match(regex)
     end

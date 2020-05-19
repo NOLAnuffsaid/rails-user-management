@@ -27,10 +27,13 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # A plain-Ruby implementation of GraphQL
 gem 'graphql', '>= 1.10.8'
 
+gem 'raddocs'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'faker'
+  gem 'rspec_api_documentation'
 end
 
 group :development do
