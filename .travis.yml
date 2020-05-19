@@ -19,5 +19,4 @@ before_script:
   - RAILS_ENV=test bundle exec rails db:setup && RAILS_ENV=test bundle exec rails db:migrate
 
 script:
-  - rubocop -F
-  - bundle exec rspec && bundle exec cucumber
+  - bundle exec rubocop -F && bundle exec rspec && bundle exec cucumber
