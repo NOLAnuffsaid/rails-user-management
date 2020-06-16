@@ -9,5 +9,5 @@ Rails.application.routes.draw do
 
   mount Raddocs::App => '/docs'
 
-  match '*path' => 'error#not_found', via: %i[get post]
+  match '/*path' => 'error#not_found', via: %i[get post]
 end
